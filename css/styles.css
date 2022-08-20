@@ -1,0 +1,245 @@
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');    /* Splash */
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');  /* The Nautigal */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');  /* Indie Flower */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');  /* Playfair Display */
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');   /* Londrina Shadow */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap');   /* Spline Sans */
+
+/* Custom font (Nerd Font) */
+
+@font-face {
+    font-family: JetBrainsNF;
+    src: url('JetBrains Mono Medium Medium Nerd Font Complete Mono.ttf');
+}
+
+
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(165deg, rgba(238,174,202,1) 0%, 
+                rgba(148,187,233,1) 100%);
+}
+
+p {
+    font-size: 1.4em;
+    font-family: 'Playfair Display', serif;
+    text-indent: 5vw;
+}
+
+h3 {
+    font-weight: bold;
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 2.2em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(38, 185, 207);
+}
+
+i {
+    font-style: italic;
+}
+
+span {
+    font-family: JetBrainsNF;
+    font-size: 1em;
+}
+
+
+header {
+    background: rgb(16,31,122);
+    background: linear-gradient(0deg, rgba(16,31,122,1) 0%, 
+        rgba(17,203,194,1) 98%);
+    text-align: center;
+    padding: 2.4em;
+}
+
+header h1 {
+    font-size: 4em;
+    font-family: 'The Nautigal', cursive;
+    font-weight: bold;
+}
+
+.main-nav {
+    background-image: linear-gradient(rgb(16, 31, 122), rgb(68, 61, 108));
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 23px;
+    padding: 52px 4vw;
+}
+
+.main-nav > ul {
+    display: flex;
+}
+
+.main-nav > ul > li {
+    margin-right: 1vw;
+}
+
+.main-nav > ul > li > a {
+    padding: 14px;
+}
+
+.main-nav > ul > li > a:hover {
+    background-color: #4cabbe;
+    color: #d3c452;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content > ul {
+    margin-left: 10px;
+}
+
+.dropdown-content > ul > li {
+    margin: 2vh 0;
+    font-family: JetBrainsNF;
+    font-size: 90%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    top: 38px;
+}
+
+.dropdown-content > ul > li > a:hover {
+    color: #d3c452;
+}
+
+.banner {
+    display: flex;
+    background-color: rgb(145, 190, 213);
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2 {
+    font-family: 'Indie Flower', cursive;
+    width: 50%;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(0, 7, 221);
+    text-align: center;
+    line-height: 2em;
+    text-shadow: 3px 2px 6px rgb(0, 200, 255);
+}
+
+main {
+    padding: 5vw;
+}
+
+article h3 {
+    margin: 10px 10px 20px 10px;
+    padding-bottom: 10px; 
+    border-bottom: 1px solid #403e3e;
+}
+
+article p {
+    line-height: 1.4em;
+}
+
+main div {
+    width: fit-content;
+    max-width: 1024px;
+    margin: 5vw auto;
+}
+
+main div img {
+    width: 100%;
+}
+
+main div p {
+    font-size: 1em;
+    text-indent: 0;
+    margin: 2vh 0 0 1vw;
+}
+
+footer {
+    background-color: rgb(174, 174, 174);
+    padding: 2em;
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+footer ul li {
+    display: inline-block;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .banner {
+        background-image: url(/img/banner-small.jpg);
+        background-repeat: no-repeat;
+        max-width: 100%;
+        width: 600px;
+        max-height: 100%;
+        height: 400px;
+    }
+
+    .main-nav {
+        display: block;
+    }
+
+    .main-nav > ul {
+        display: block;
+    }
+    
+    .main-nav > ul > li {
+        width: fit-content;
+        margin: 2vh auto;
+    }
+
+    img.big-screens {
+        display: none;
+    }
+
+    img.small-screens {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 450px) {
+
+    .banner {
+        background-image: url(/img/banner-big.png);
+        background-repeat: no-repeat;
+        max-width: 2560px;
+        max-height: 1440px;
+    }
+
+    .banner h2 {
+        width: 20%;
+    }
+
+    img.big-screens {
+        display: block;
+    }
+
+    img.small-screens {
+        display: none;
+    }
+}
