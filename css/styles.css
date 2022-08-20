@@ -35,7 +35,6 @@ h3 {
 
 a {
     text-decoration: none;
-    color: rgb(38, 185, 207);
 }
 
 i {
@@ -67,6 +66,10 @@ header h1 {
     font-family: 'Spline Sans', sans-serif;
     font-size: 23px;
     padding: 52px 4vw;
+}
+
+.main-nav a {
+    color: rgb(38, 185, 207);
 }
 
 .main-nav > ul {
@@ -125,7 +128,6 @@ header h1 {
 
 .banner {
     display: flex;
-    background-color: rgb(145, 190, 213);
     justify-content: center;
     align-items: center;
 }
@@ -172,21 +174,45 @@ main div p {
 }
 
 footer {
-    background-color: rgb(174, 174, 174);
-    padding: 2em;
+    background-color: rgba(255, 207, 241, 0.556);
+    color: black;
+    padding: 5vh 4vw;
+    display: flex;
+    justify-content: space-between;
 }
 
-footer ul {
+footer > ul:first-child {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer > ul:first-child > li {
+    justify-self: center;
+    align-self: center;
+}
+
+footer > ul > li > a {
+    color: black;
+}
+
+footer > ul:last-child {
+    width: 10%;
     display: flex;
-    list-style-type: none;
     justify-content: space-around;
 }
 
-footer ul li {
+footer > ul > li {
     display: inline-block;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 20px;
 }
+
+footer > ul > li > a > img {
+    width: 3vw;
+}
+
+
 
 
 @media screen and (max-width: 450px) {
