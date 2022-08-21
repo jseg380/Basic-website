@@ -150,9 +150,6 @@ header h1 {
     width: 100%;
     height: 70px;
     background-image: linear-gradient(rgb(105, 83, 125), rgb(199, 180, 215));
-    /* filter:blur(1px);
-    position: relative;
-    top: -2px; */
 }
 
 main {
@@ -187,6 +184,7 @@ main div p {
 }
 
 footer {
+    /* Alternative simpler background colour  */
     /* background-color: rgba(255, 207, 241, 0.556); */
     background-image: linear-gradient(1deg, rgba(238,174,202,1), rgba(148,187,233,1));
     color: black;
@@ -298,10 +296,10 @@ footer > ul > li > a > img {
         padding: 20px;
     }
 
-    footer > ul {
+    footer > ul:first-child, footer > ul:last-child {
         margin: 10px auto 0 auto;
         width: fit-content;
-        display: flex !important;
+        display: flex;
         justify-content: center;
     }
 
@@ -336,6 +334,6 @@ footer > ul > li > a > img {
     }
 
     .banner h2 {
-        width: 20%;
+        width: 40%;
     }
 }
