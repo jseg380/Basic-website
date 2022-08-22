@@ -1,0 +1,75 @@
+/* Footer */
+
+.page-footer {
+    /* Alternative simpler background colour  */
+    /* background-color: rgba(255, 207, 241, 0.556); */
+    background-image: linear-gradient(1deg, rgba(238,174,202,1), rgba(148,187,233,1));
+    color: black;
+    padding: 5vh 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-footer > ul:first-child {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.page-footer > ul:first-child > li > a {
+    margin-right: 6vw;
+    text-align: center;
+}
+
+.page-footer > ul > li > a {
+    color: black;
+}
+
+.page-footer > ul:last-child {
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+.page-footer > ul > li {
+    display: inline-block;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 20px;
+    width: fit-content;
+}
+
+.page-footer > ul > li > a > img {
+    width: 40px;
+    margin-left: 30px;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+
+    .page-footer {
+        display: block;
+        padding: 20px;
+    }
+
+    .page-footer > ul:first-child, .page-footer > ul:last-child {
+        margin: 10px auto 0 auto;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-footer > ul > li {
+        margin: 0 10px;
+    }
+
+    .page-footer > ul:first-child > li > a {
+        margin-right: 0;
+    }
+
+    .page-footer > ul > li > a > img {
+        margin: 20px 20px 0 20px;
+    }
+}
