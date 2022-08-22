@@ -1,9 +1,6 @@
 /* Footer */
 
 .page-footer {
-    /* Alternative simpler background colour  */
-    /* background-color: rgba(255, 207, 241, 0.556); */
-    background-image: linear-gradient(1deg, rgba(238,174,202,1), rgba(148,187,233,1));
     color: black;
     padding: 5vh 4vw;
     display: flex;

@@ -1,14 +1,9 @@
 /* Navbar with dropdown using only CSS */
 
 .main-nav {
-    background-image: linear-gradient(rgb(16, 31, 122), rgb(68, 61, 108));
     font-family: 'Spline Sans', sans-serif;
     font-size: 23px;
     padding: 52px 4vw;
-}
-
-.main-nav a {
-    color: rgb(38, 185, 207);
 }
 
 .main-nav > ul {
@@ -24,8 +19,6 @@
 }
 
 .main-nav > ul > li > a:hover {
-    background-color: #FFFFFF;
-    color: #d3c452;
     border-radius: 5px;
 }
 
@@ -59,10 +52,6 @@
 .dropdown:hover .dropdown-content {
     display: block;
     top: 38px;
-}
-
-.dropdown-content > ul > li > a:hover {
-    color: #d3c452;
 }
 
 
