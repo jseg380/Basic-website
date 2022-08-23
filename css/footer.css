@@ -21,6 +21,7 @@
 
 .page-footer > ul > li > a {
     color: black;
+    text-decoration: none;
 }
 
 .page-footer > ul:last-child {

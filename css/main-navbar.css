@@ -16,10 +16,16 @@
 
 .main-nav > ul > li > a {
     padding: 14px;
+    text-decoration: none;
 }
 
 .main-nav > ul > li > a:hover {
     border-radius: 5px;
+}
+
+.main-nav > ul > li > a > span {
+    font-family: JetBrainsNF;
+    font-size: 1em;
 }
 
 .dropdown {
