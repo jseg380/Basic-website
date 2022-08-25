@@ -21,9 +21,30 @@ a:visited {
 }
 
 .main-nav {
-  background-color: tomato;
+  background-color: #585858;
   padding-top: var(--paddding-navbar);
   padding-bottom: var(--paddding-navbar);
+}
+
+.main-nav > ul > li:first-child > a {
+  background-color: #838383;
+  border-radius: 5px;
+}
+
+.main-nav > ul > li > a {
+  color: white;
+}
+
+.main-nav > ul > li > a:hover {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  background-color: lightgrey;
+}
+
+.dropdown-content > ul > li > a:hover {
+  color: white;
 }
 
 header {
@@ -34,4 +55,8 @@ header {
 header h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2vw;
+}
+
+.page-footer {
+  background-color: #ECECEC;
 }
