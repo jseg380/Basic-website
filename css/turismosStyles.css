@@ -48,15 +48,43 @@ a:visited {
 }
 
 header {
-  text-align: center;
-  padding: 4vh 2vw;
+  height: 500px;
+  background-image: url(../img/turismos/civic-wallpaper.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
 }
 
-header h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vw;
+main {
+  height: 100vh;
+  background: rgb(89,89,89);
+  background: radial-gradient(circle, rgba(89,89,89,1) 16%, rgba(170,170,170,1) 100%); 
 }
 
 .page-footer {
   background-color: #ECECEC;
+}
+
+
+@media only screen and (max-width: 800px) {
+  header {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .main-nav > ul > li > a:first-child {
+    background-color: transparent;
+  }
+
+  .dropdown-content {
+    background-color: transparent;
+  }
+
+  .dropdown-content > ul > li > a {
+    color: white;
+  }
 }
