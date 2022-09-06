@@ -19,7 +19,9 @@ window.addEventListener('load', function () {
 
     const selectedImg = e.target;
     
-    bigImg.setAttribute('src', selectedImg.getAttribute('src'));
+    const imgSrc = selectedImg.getAttribute('src').replace('_small', '');
+    console.log(imgSrc);
+    bigImg.setAttribute('src', imgSrc);
     bigImg.setAttribute('alt', selectedImg.getAttribute('alt'));
     bigImg.setAttribute('title', selectedImg.getAttribute('title'));
     desc.innerText = bigImg.getAttribute('title');
