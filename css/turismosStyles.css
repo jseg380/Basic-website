@@ -99,19 +99,27 @@ main {
 
 #big-image-div {
   display: none;
+  width: fit-content;
+  height: fit-content;
+  padding: 1vh 1vw;
   position: absolute;
-  top: 5%;
-  padding: 3% 3% 2% 3%;
   background-color: white;
-  box-shadow: 3px 3px 8px black;
-  flex-direction: column;
-
+  box-shadow: 2px 2px 8px black, -2px -2px 8px black;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  
   z-index: 2;
+}
+
+#closeBtn {
+  width: 40px;
+  grid-column: 3 / 4;
+  justify-self: end;
 }
 
 #big-image {
   width: 70vw;
-  /* height: 55vh; */
+  grid-column: 2 / 3;
 }
 
 #description {
@@ -119,12 +127,10 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   word-wrap: normal;
   text-align: justify;
+  justify-self: center;
   align-self: center;
-  margin-top: 20px;
-}
-
-#closeBtn {
-  width: 40px;
+  margin: 2vh 0;
+  grid-column: 2 / 3;
 }
 
 #closeBtn:hover {
@@ -154,6 +160,10 @@ main {
     grid-column: span 2;
   }
 
+  #images > img:hover {
+    transform: scale(1.25);
+  }
+
   #images > img:nth-last-child(2) {
     grid-column: 2 / 4;
   }
@@ -180,7 +190,7 @@ main {
 
 @media only screen and (min-width: 600px) {
   #images > img:hover {
-    transform: scale(1.25);
+    transform: scale(1.15);
     transition: ease-out 500ms;
     box-shadow: none;
     z-index: 2;
