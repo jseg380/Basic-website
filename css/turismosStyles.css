@@ -58,7 +58,7 @@ header {
 }
 
 main {
-  height: 100vh;
+  height: fit-content;
   background: #faebe3;
   display: flex;
   justify-content: space-evenly;
@@ -68,6 +68,8 @@ main {
 }
 
 #main-title {
+  margin: 100px 0 20px 0;
+  text-align: center;
   font-size: 70px;
   font-family: 'Teko', 'Arial';
   color: #c3db9b;
@@ -80,8 +82,6 @@ main {
   width: fit-content;
   height: fit-content;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 20px 20px;
 
   z-index: 1;
@@ -128,9 +128,9 @@ main {
 
 #closeBtn {
   width: 40px;
-  position: absolute;
+  /* position: absolute;
   top: 3%;
-  right: 1%;
+  right: 1%; */
 }
 
 #closeBtn:hover {
@@ -142,9 +142,29 @@ main {
 }
 
 
+
+@media only screen and (min-width: 1000px) {
+  #images {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #images {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
 @media only screen and (max-width: 800px) {
   header {
     background-attachment: scroll;
+  }
+
+  #images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
@@ -160,5 +180,11 @@ main {
 
   .dropdown-content > ul > li > a {
     color: white;
+  }
+
+  #images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 40px 0;
   }
 }
