@@ -90,10 +90,11 @@ main {
 
 #images > img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   transition: ease-out 300ms;
   z-index: 1;
   border-radius: 2px;
+  box-shadow: 2px 2px 4px black;
 }
 
 #big-image-div {
@@ -181,6 +182,7 @@ main {
   #images > img:hover {
     transform: scale(1.25);
     transition: ease-out 500ms;
+    box-shadow: none;
     z-index: 2;
   }
 }
