@@ -107,6 +107,7 @@ main {
   box-shadow: 2px 2px 8px black, -2px -2px 8px black;
   grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto auto 1fr;
+  gap: 0 5px;
   
   z-index: 2;
 }
@@ -115,6 +116,13 @@ main {
   width: 40px;
   grid-column: 3 / 4;
   justify-self: end;
+}
+
+#leftArrow, #rightArrow {
+  width: 40px;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
 }
 
 #big-image {
