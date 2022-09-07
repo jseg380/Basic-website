@@ -40,7 +40,11 @@ window.addEventListener('load', function () {
     desc.innerText = bigImg.getAttribute('title');
     
     bigImgDiv.style.display = 'grid';
-    bigImg.scrollIntoView({behavior: 'smooth'});
+    bigImgDiv.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    });
   }
 
   function CloseImage(e) {
