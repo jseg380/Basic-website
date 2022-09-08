@@ -33,21 +33,36 @@
     </ul>
   </nav>
 
-  <header>
+  <header title="Pulsa Shift+Click izquierdo para ver la fuente">
     <!-- Image in the background, thus no code in here -->
   </header>
 
   <main>
     <div id="main-title">Visualizador de coches</div>
     <div id="images">
-      <img src="img/turismos/Audi/Audi_A4_1_small.jpg" class="gallery-img" alt="Photo of an Audi A4" title="Audi A4">
-      <img src="img/turismos/BMW/BMW_3_series_1_small.jpg" class="gallery-img" alt="Photo of a BMW 3 series" title="BMW 3 series">
-      <img src="img/turismos/Honda/Honda_Civic_1_small.jpg" class="gallery-img" alt="Photo of a Honda Civic" title="Honda Civic">
-      <img src="img/turismos/Mercedes/Mercedes-Benz_Class_C_1_small.jpg" class="gallery-img" alt="Photo of a Mercedes Benz Class C" title="Mercedes Benz Class C">
-      <img src="img/turismos/Lexus/Lexus_ES_350_1_small.jpg" class="gallery-img" alt="Photo of a Lexus ES 350" title="Lexus ES 350">
-      <img src="img/turismos/Alfa_Romeo/Alfa_Romeo_Giulia_Quadrifoglio_1_small.jpg" class="gallery-img" alt="Photo of an Alfa Romeo Giulia" title="Alfa Romeo Giulia Quadrifoglio">
-      <img src="img/turismos/Porsche/Porsche_Panamera_1_small.jpg" class="gallery-img" alt="Photo of a Porsche Panamera" title="Porsche Panamera">
-      <img src="img/turismos/Maserati/Maserati_Ghibli_1_small.jpg" class="gallery-img" alt="Photo of a Maserati Ghibli" title="Maserati Ghibli">
+      <img src="img/turismos/Audi/Audi_A4_1_small.jpg" class="gallery-img" alt="Photo of an Audi A4" title="Audi A4" 
+        data-sources="https://commons.wikimedia.org/wiki/File:Audi_A4_2.0_TDI_Ambition_(B8,_Facelift)_%E2%80%93_Frontansicht,_30._Juli_2012,_Ratingen.jpg https://commons.wikimedia.org/wiki/File:Audi_A4_2.0_TDI_Ambition_(B8,_Facelift)_%E2%80%93_Heckansicht,_30._Juli_2012,_Ratingen.jpg">
+
+      <img src="img/turismos/BMW/BMW_3_series_1_small.jpg" class="gallery-img" alt="Photo of a BMW 3 series" title="BMW 3 series" 
+        data-sources="https://commons.wikimedia.org/wiki/File:BMW_G20_IMG_0167.jpg https://commons.wikimedia.org/wiki/File:2021_BMW_3-Series_Gran_Sedan_320Li_Luxury_%28Rear%29.jpg">
+
+      <img src="img/turismos/Honda/Honda_Civic_1_small.jpg" class="gallery-img" alt="Photo of a Honda Civic" title="Honda Civic" 
+        data-sources="https://commons.wikimedia.org/wiki/File:Honda_Civic_1.0_VTEC_Turbo_Executive_Sport-Line_%28X%29_%E2%80%93_f_25072020.jpg https://commons.wikimedia.org/wiki/File:Honda_Civic_1.0_VTEC_Turbo_Executive_Sport-Line_(X)_%E2%80%93_h_25072020.jpg">
+
+      <img src="img/turismos/Mercedes/Mercedes-Benz_Class_C_1_small.jpg" class="gallery-img" alt="Photo of a Mercedes Benz Class C" title="Mercedes Benz Class C" 
+        data-sources="https://commons.wikimedia.org/wiki/File:Mercedes-Benz_C_200_d_(W_205)_%E2%80%93_Frontansicht,_18._Oktober_2015,_Ratingen.jpg https://commons.wikimedia.org/wiki/File:Mercedes-Benz_C_200_d_(W_205)_%E2%80%93_Heckansicht,_18._Oktober_2015,_Ratingen.jpg">
+      
+      <img src="img/turismos/Lexus/Lexus_ES_350_1_small.jpg" class="gallery-img" alt="Photo of a Lexus ES 350" title="Lexus ES 350" 
+        data-sources="https://commons.wikimedia.org/wiki/File:Lexus_ES_350_%28GSZ10%29_IMG_4332.jpg https://commons.wikimedia.org/wiki/File:2019_Lexus_ES_350,_rear_5.19.20.jpg">
+      
+      <img src="img/turismos/Alfa_Romeo/Alfa_Romeo_Giulia_Quadrifoglio_1_small.jpg" class="gallery-img" alt="Photo of an Alfa Romeo Giulia" title="Alfa Romeo Giulia Quadrifoglio" 
+        data-sources="https://commons.wikimedia.org/wiki/File:2020_Alfa_Romeo_Giulia_Quadrifoglio_V6_Biturbo_2.9_Front.jpg https://commons.wikimedia.org/wiki/File:2020_Alfa_Romeo_Giulia_Quadrifoglio_V6_Biturbo_2.9_Rear.jpg">
+      
+      <img src="img/turismos/Porsche/Porsche_Panamera_1_small.jpg" class="gallery-img" alt="Photo of a Porsche Panamera" title="Porsche Panamera" 
+        data-sources="https://commons.wikimedia.org/wiki/File:2017_Porsche_Panamera_E-Hybrid_4_S-A_2.9_Front.jpg https://commons.wikimedia.org/wiki/File:2017_Porsche_Panamera_E-Hybrid_4_S-A_2.9_Rear.jpg">
+      
+      <img src="img/turismos/Maserati/Maserati_Ghibli_1_small.jpg" class="gallery-img" alt="Photo of a Maserati Ghibli" title="Maserati Ghibli" 
+        data-sources="https://commons.wikimedia.org/wiki/File:Maserati_Ghibli_%28IV%29_%E2%80%93_Frontansicht,_27._April_2014,_Meerbusch.jpg https://commons.wikimedia.org/wiki/File:Maserati_Ghibli_(IV)_%E2%80%93_Heckansicht,_27._April_2014,_Meerbusch.jpg">
     </div>
     <div id="big-image-div">
       <img src="img/icons/close.ico" alt="Close icon" id="closeBtn">
@@ -55,6 +70,11 @@
       <img src="" alt="" id="big-image">
       <img src="img/icons/right_arrow.ico" alt="" id="rightArrow">
       <p id="description"></p>
+    </div>
+    <div id="sources">
+      <div id="src-title">Fuentes</div>
+      <div id="box">Arrastra una imagen aquí para mostrar su fuente</div>
+      <div id="show-info"><ul id="info-list"></ul></div>
     </div>
   </main>
 

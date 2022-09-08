@@ -57,6 +57,18 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > a {
+  word-wrap: break-word;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(4, 199, 134) !important;
+  text-align: center;
 }
 
 main {
@@ -134,7 +146,7 @@ main {
   font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
   word-wrap: normal;
-  text-align: justify;
+  text-align: center;
   justify-self: center;
   align-self: center;
   margin: 2vh 0;
@@ -145,16 +157,81 @@ main {
   cursor: pointer;
 }
 
+#sources {
+  width: fit-content;
+  display: grid;
+  align-self: start;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 10px 20px;
+  margin: 1vh 0 5vh 4vw;
+}
+
+#src-title {
+  grid-column: span 2;
+  text-align: left;
+  font-size: 50px;
+  font-family: 'Teko', 'Arial';
+  color: #c3db9b;
+  text-shadow: 2px 2px 5px #536637;
+}
+
+#box {
+  border: 2px solid black;
+  padding: 2vh 2vw;
+  width: 28vw;
+  height: 24vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 3px #8e7e76, -2px -2px 3px #8e7e76;
+  border-radius: 5px;
+}
+
+#image-selected {
+  width: 100%;
+  border-radius: 2px;
+  -webkit-user-drag: none;
+}
+
+#show-info {
+  width: 50vw;
+  background-color: #dcdcdc;
+  border-radius: 15px;
+  padding: 3vh 3vw;
+}
+
+#info-list > li {
+  color: rgb(11, 0, 53);
+  margin-bottom: 2vh;
+  word-wrap: break-word;
+}
+
 .page-footer {
   background-color: #e1b7a0;
 }
 
 
 
+@media only screen and (min-width: 600px) {
+  #images > img:hover {
+    transform: scale(1.15);
+    transition: ease-out 500ms;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   #images {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  #images > img:hover {
+    transform: scale(1.25);
   }
 }
 
@@ -166,10 +243,6 @@ main {
 
   #images > img {
     grid-column: span 2;
-  }
-
-  #images > img:hover {
-    transform: scale(1.25);
   }
 
   #images > img:nth-last-child(2) {
@@ -196,15 +269,6 @@ main {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  #images > img:hover {
-    transform: scale(1.15);
-    transition: ease-out 500ms;
-    box-shadow: none;
-    z-index: 2;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .main-nav > ul > li > a:first-child {
     background-color: transparent;
@@ -222,5 +286,34 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, 1fr);
     gap: 40px 0;
+  }
+
+  #big-image-div {
+    padding: 1%;
+    gap: 0;
+  }
+
+  #big-image {
+    grid-column: 1 / 4;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #leftArrow {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #rightArrow {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
+  #leftArrow, #rightArrow {
+    width: 30px;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
   }
 }
