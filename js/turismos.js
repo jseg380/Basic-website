@@ -26,6 +26,8 @@ window.addEventListener('load', function () {
   let allSrcList = [];
   let sourcesShown = false;
 
+  const boxDropMsg = 'Arrastra una imagen aquí para mostrar su fuente';
+
   // Event listeners
 
   header.addEventListener('click', (e) => {
@@ -70,23 +72,31 @@ window.addEventListener('load', function () {
   boxDrop.addEventListener('drop', DropImage);
 
   srcBtn.addEventListener('click', () => {
-    if (sourcesShown) {
-      showInfo.style.display = 'none';
-      srcBtn.innerText = 'Mostrar fuentes';
-      sourcesShown = false;
-      infoList.innerHTML = '';
-    }
+    if (sourcesShown)
+      HideSources();
     else
       ShowSources();
   });
 
   this.window.addEventListener('resize', () => {
     if (this.window.innerWidth <= 600) {
-      showInfo.style.display = 'none';
-      infoList.innerHTML = '';
+      if (!sourcesShown) {
+        showInfo.style.display = 'none';
+        infoList.innerHTML = '';
+      }
+
+      if (!(boxDrop.innerHTML === boxDropMsg)) {
+        console.log('Less than 600 px and something on the box');
+        boxDrop.innerHTML = boxDropMsg;
+      }
+      else
+        console.log('Less than 600 px and nothing on the box');
     }
     else {
       showInfo.style.display = 'block';
+      if (sourcesShown) {
+        HideSources();
+      }
     }
   });
 
@@ -237,6 +247,13 @@ window.addEventListener('load', function () {
 
     sourcesShown = true;
     srcBtn.innerText = 'Ocultar fuentes';
+  }
+
+  function HideSources() {
+    showInfo.style.display = 'none';
+    srcBtn.innerText = 'Mostrar fuentes';
+    sourcesShown = false;
+    infoList.innerHTML = '';
   }
 
   function GetAllSources() {
