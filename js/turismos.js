@@ -86,11 +86,8 @@ window.addEventListener('load', function () {
       }
 
       if (!(boxDrop.innerHTML === boxDropMsg)) {
-        console.log('Less than 600 px and something on the box');
         boxDrop.innerHTML = boxDropMsg;
       }
-      else
-        console.log('Less than 600 px and nothing on the box');
     }
     else {
       showInfo.style.display = 'block';
