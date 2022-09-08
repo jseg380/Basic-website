@@ -3,19 +3,28 @@ window.addEventListener('load', function () {
   // Variables
 
   const header = document.getElementsByTagName('header')[0];
+
+  const imgList = document.getElementsByClassName('gallery-img');
+  
   const bigImgDiv = document.getElementById('big-image-div');
   const bigImg = document.getElementById('big-image');
-  const imgList = document.getElementsByClassName('gallery-img');
   const desc = document.getElementById('description');
   const closeBtn = document.getElementById('closeBtn');
   const nextBtn = document.getElementById('rightArrow');
   const prevBtn = document.getElementById('leftArrow');
+
+  const srcBtn = document.getElementById('src-button');
   const boxDrop = document.getElementById('box');
+  const showInfo = document.getElementById('show-info');
   const infoList = document.getElementById('info-list');
   
   const numImages = 2;
   let counter = 0;
+
   let headerSrc = false;
+
+  let allSrcList = [];
+  let sourcesShown = false;
 
   // Event listeners
 
@@ -59,6 +68,16 @@ window.addEventListener('load', function () {
   });
 
   boxDrop.addEventListener('drop', DropImage);
+
+  srcBtn.addEventListener('click', () => {
+    if (sourcesShown) {
+      showInfo.style.display = 'none';
+      srcBtn.innerText = 'Mostrar fuentes';
+      sourcesShown = false;
+    }
+    else
+      ShowSources();
+  });
 
 
   // Functions
@@ -178,5 +197,44 @@ window.addEventListener('load', function () {
 
       infoList.appendChild(newElem);
     }
+  }
+
+  function ShowSources() {
+    if (allSrcList.length === 0) {
+      GetAllSources();
+    }
+
+    const srcList = allSrcList;
+
+    for (let i = 0; i < srcList.length; i++) {
+      const newLink = document.createElement('a');
+      newLink.innerHTML = srcList[i];
+      newLink.setAttribute('href', srcList[i]);
+      newLink.setAttribute('target', '_blank');
+
+      const newElem = document.createElement('li');
+      newElem.innerHTML = newLink.outerHTML;
+
+      infoList.appendChild(newElem);
+    }
+
+    showInfo.style.display = 'block';
+
+    sourcesShown = true;
+    srcBtn.innerText = 'Ocultar fuentes';
+  }
+
+  function GetAllSources() {
+    let srcList = ['https://browsecat.net/other/honda-civic-si-2000-modified-wallpapers'];
+
+    for (let i = 0; i < imgList.length; i++) {
+      const sourcesAttr = imgList[i].getAttribute('data-sources').split(' ');
+
+      for (let j = 0; j < sourcesAttr.length; j++) {
+        srcList.push(sourcesAttr[j]);
+      }
+    }
+
+    allSrcList = srcList;
   }
 });

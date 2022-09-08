@@ -176,6 +176,10 @@ main {
   text-shadow: 2px 2px 5px #536637;
 }
 
+#src-button {
+  display: none;
+}
+
 #box {
   border: 2px solid black;
   padding: 2vh 2vw;
@@ -221,6 +225,10 @@ main {
     box-shadow: none;
     cursor: pointer;
     z-index: 2;
+  }
+
+  .smaller-600 {
+    display: none;
   }
 }
 
@@ -315,5 +323,52 @@ main {
     justify-self: center;
     align-self: center;
     cursor: pointer;
+  }
+
+  #sources {
+    align-self: center;
+    margin: 0 0 30px 0;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #src-title {
+    grid-column: span 1;
+    justify-self: center;
+  }
+
+  #src-button {
+    display: inline-block;
+    width: fit-content;
+    justify-self: center;
+    padding: 8px;
+  }
+
+  #box {
+    display: none;
+  }
+  
+  #show-info {
+    width: 80vw;
+    justify-self: center;
+    display: none;
+    line-height: 1.25em;
+  }
+
+  #show-info > ul > li {
+    margin: 40px 0;
+  }
+
+  #show-info > ul > li:first-child {
+    margin: 0;
+  }
+
+  #show-info > ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .smaller-600 {
+    display: inline-block;
   }
 }
