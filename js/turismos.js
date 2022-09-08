@@ -74,9 +74,20 @@ window.addEventListener('load', function () {
       showInfo.style.display = 'none';
       srcBtn.innerText = 'Mostrar fuentes';
       sourcesShown = false;
+      infoList.innerHTML = '';
     }
     else
       ShowSources();
+  });
+
+  this.window.addEventListener('resize', () => {
+    if (this.window.innerWidth <= 600) {
+      showInfo.style.display = 'none';
+      infoList.innerHTML = '';
+    }
+    else {
+      showInfo.style.display = 'block';
+    }
   });
 
 
@@ -205,6 +216,10 @@ window.addEventListener('load', function () {
     }
 
     const srcList = allSrcList;
+
+    const firstElem = document.createElement('li');
+    firstElem.innerText = 'Por orden de aparición:';
+    infoList.appendChild(firstElem);
 
     for (let i = 0; i < srcList.length; i++) {
       const newLink = document.createElement('a');
