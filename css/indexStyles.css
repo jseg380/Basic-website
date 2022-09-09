@@ -42,11 +42,12 @@ i {
 
 #main-nav > ul > li > a:hover {
     background-color: #FFFFFF;
-    color: #d3c452;
 }
 
 .dropdown-content > ul > li > a:hover {
-    color: #d3c452;
+    /* color: #d3c452; Not working for some reason */
+    background-color: rgb(222, 248, 248);
+    border-radius: 5px;
 }
 
 #banner {
