@@ -22,23 +22,29 @@ a:visited {
   color: var(--links-colour);
 }
 
-.main-nav {
+#main-header {
+  background: linear-gradient(0deg, rgb(88, 88, 88) 0%, 
+      rgba(17,203,194,1) 98%);
+}
+
+#main-nav {
   background-color: #585858;
   padding-top: var(--paddding-navbar);
   padding-bottom: var(--paddding-navbar);
 }
 
-.main-nav > ul > li:first-child > a {
+#main-nav > ul > li:first-child > a {
   background-color: #838383;
   border-radius: 5px;
 }
 
-.main-nav > ul > li > a {
+#main-nav > ul > li > a {
   color: white;
 }
 
-.main-nav > ul > li > a:hover {
-  background-color: lightblue;
+#main-nav > ul > li > a:hover {
+  /* background-color: lightblue; Another nice color */
+  background-color: rgba(17, 203, 194, 0.273);
 }
 
 .dropdown-content {
@@ -184,7 +190,7 @@ main {
   border: 2px solid black;
   padding: 2vh 2vw;
   width: 28vw;
-  height: 24vh;
+  height: 28vh;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -212,7 +218,7 @@ main {
   word-wrap: break-word;
 }
 
-.page-footer {
+#page-footer {
   background-color: #e1b7a0;
 }
 
@@ -278,7 +284,7 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  .main-nav > ul > li > a:first-child {
+  #main-nav > ul > li > a:first-child {
     background-color: transparent;
   }
 
