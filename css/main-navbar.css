@@ -1,29 +1,29 @@
 /* Navbar with dropdown using only CSS */
 
-.main-nav {
+#main-nav {
     font-family: 'Spline Sans', sans-serif;
     font-size: 23px;
     padding: 52px 4vw;
 }
 
-.main-nav > ul {
+#main-nav > ul {
     display: flex;
 }
 
-.main-nav > ul > li {
+#main-nav > ul > li {
     margin-right: 1vw;
 }
 
-.main-nav > ul > li > a {
+#main-nav > ul > li > a {
     padding: 14px;
     text-decoration: none;
 }
 
-.main-nav > ul > li > a:hover {
+#main-nav > ul > li > a:hover {
     border-radius: 5px;
 }
 
-.main-nav > ul > li > a > span {
+#main-nav > ul > li > a > span {
     font-family: JetBrainsNF;
     font-size: 1em;
 }
@@ -65,22 +65,22 @@
 
 @media screen and (max-width: 600px) {
 
-    .main-nav {
+    #main-nav {
         display: block;
     }
 
-    .main-nav > ul {
+    #main-nav > ul {
         display: block;
         width: fit-content;
         margin: 0 auto;
         text-align: center;
     }
 
-    .main-nav > ul > li {
+    #main-nav > ul > li {
         margin: 30px 0;
     }
 
-    .main-nav > ul > li > a:hover {
+    #main-nav > ul > li > a:hover {
         background-color: transparent;
     }
 

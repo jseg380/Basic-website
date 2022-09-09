@@ -27,30 +27,20 @@ i {
     font-style: italic;
 }
 
-header {
-    background: rgb(16,31,122);
+#main-header {
     background: linear-gradient(0deg, rgba(16,31,122,1) 0%, 
         rgba(17,203,194,1) 98%);
-    text-align: center;
-    padding: 2.4em;
 }
 
-header h1 {
-    font-size: 4em;
-    font-family: 'The Nautigal', cursive;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px black;
-}
-
-.main-nav {
+#main-nav {
     background-image: linear-gradient(rgb(16, 31, 122), rgb(68, 61, 108));
 }
 
-.main-nav a {
+#main-nav a {
     color: rgb(38, 185, 207);
 }
 
-.main-nav > ul > li > a:hover {
+#main-nav > ul > li > a:hover {
     background-color: #FFFFFF;
     color: #d3c452;
 }
@@ -59,7 +49,7 @@ header h1 {
     color: #d3c452;
 }
 
-.banner {
+#banner {
     background-image: url(../img/index/banner.png);
     background-repeat: no-repeat;
     display: flex;
@@ -67,7 +57,7 @@ header h1 {
     align-items: center;
 }
 
-.banner h2 {
+#banner h2 {
     font-family: 'Indie Flower', cursive;
     width: 50%;
     font-size: 2.2em;
@@ -115,7 +105,7 @@ main div p {
     margin: 2vh 0 0 1vw;
 }
 
-.page-footer {
+#page-footer {
     /* Alternative simpler background colour  */
     /* background-color: rgba(255, 207, 241, 0.556); */
     /* Another alternative: */
@@ -137,7 +127,7 @@ main div p {
         display: block;
     }
 
-    .banner {
+    #banner {
         max-width: 100%;
         width: 600px;
         max-height: 100%;
@@ -155,14 +145,14 @@ main div p {
         display: none;
     }
 
-    .banner {
+    #banner {
         max-width: 2560px;
         max-height: 1440px;
         width: 100%;
         height: 400px;
     }
 
-    .banner h2 {
+    #banner h2 {
         width: 40%;
     }
 }

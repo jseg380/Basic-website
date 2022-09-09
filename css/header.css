@@ -1,0 +1,17 @@
+/* Header */
+
+#main-header {
+  /* Colors go from rgb(17, 203, 194) to whatever colour is the navbar */
+  /* background: linear-gradient(0deg, rgba(16,31,122,1) 0%, 
+      rgba(17,203,194,1) 98%); */
+  text-align: center;
+  padding: 2.4em;
+  height: fit-content;
+}
+
+#main-header h1 {
+  font-size: 4em;
+  font-family: 'The Nautigal', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px black;
+}
