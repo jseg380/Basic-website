@@ -2,7 +2,7 @@
 
 :root {
   --links-colour: black;
-  --paddding-navbar: 30px;
+  --padding-navbar: 30px;
 }
 
 
@@ -29,8 +29,8 @@ a:visited {
 
 #main-nav {
   background-color: #585858;
-  padding-top: var(--paddding-navbar);
-  padding-bottom: var(--paddding-navbar);
+  padding-top: var(--padding-navbar);
+  padding-bottom: var(--padding-navbar);
 }
 
 #main-nav > ul > li:first-child > a {
