@@ -1,0 +1,32 @@
+/* Variables */
+
+:root {
+  --links-colour: black;
+  --paddding-navbar: 30px;
+}
+
+
+/* CSS */
+
+a {
+  color: var(--links-colour);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--links-colour);
+}
+
+#main-header {
+  background: linear-gradient(0deg, rgb(121, 121, 121) 0%, 
+  rgb(17, 203, 194) 98%);}
+
+#main-nav {
+  background-color: rgb(121, 121, 121);
+}
+
+
+
+#page-footer {
+  background-color: rgb(192, 192, 192);
+}
