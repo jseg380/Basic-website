@@ -7,11 +7,32 @@
   <link rel="shortcut icon" href="img/icons/contact.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/contactoStyles.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main-navbar.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/contactoStyles.css">
   <title>Contacto</title>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const emailField = document.getElementById('email');
+      
+      emailField.addEventListener('input', VerifyEmail);
+
+      function VerifyEmail() {
+        const email = emailField.value;
+        const re = /\S+@\S+\.\S+/;
+        let correct = re.test(email);
+        
+        if (correct) {
+          emailField.style.backgroundColor = '#C9FFD5';
+        }
+        else {
+          emailField.style.backgroundColor = 'white';
+        }
+      }
+    });
+  </script>
 </head>
 <body>
   <header id="main-header">
@@ -33,18 +54,50 @@
           </ul>
         </div>
       </li>
+      <li><a href="turismos.html">Turismos</a></li>
       <li><a href="libros.html">Libros</a></li>
       <li><a href="motos.html">Motocicletas</a></li>
     </ul>
   </nav>
 
   <main>
-    
+    <section id="info">
+      <h2>INFORMACIÓN DE<br>CONTACTO</h2>
+      <ul>
+        <li class="title">Correo electrónico</li>
+        <li class="info"><a href="mailto:test@example.com">test@example.com</a></li>
+        <li class="title">GitHub</li>
+        <li class="info"><a href="https://github.com/jseg380">https://github.com/jseg380</a></li>
+        <li class="title">LinkedIn</li>
+        <li class="info"><a href="https://www.linkedin.com/in/juan-seg380">https://www.linkedin.com/in/juan-seg380</a></li>
+      </ul>
+    </section>
+    <section id="message">
+      <p>DEJAR UN MENSAJE</p>
+      <form>
+        <div>
+          <label for="username">Usuario: </label>
+          <input type="text" name="username" id="username" placeholder="Usuario (Opcional)">
+        </div>
+        <div>
+          <label for="username">E-mail*: </label>
+          <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+        </div>
+        <div>
+          <label for="message-area">Mensaje*: </label>
+          <textarea name="message-area" id="message-area" cols="30" rows="10" placeholder="Escribe tu mensaje aquí" required></textarea>
+        </div>
+        <p>Los campos marcados con * son obligatorios.</p>
+        <button type="submit" id="btn-submit">Enviar</button>
+      </form>
+    </section>
   </main>
 
   <footer id="page-footer">
     <ul>
       <li><a href="privacidad.html">Privacidad</a></li>
+      <li><a href="contacto.html">Contacto</a></li> <!-- Not removed on purpose, 
+        to preserve the layout of 3 elements because 2 elements seemed too few -->
       <li><a href="cookies.html">Cookies</a></li>
     </ul>
     <ul>

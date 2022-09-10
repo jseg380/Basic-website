@@ -2,7 +2,9 @@
 
 :root {
   --links-colour: black;
-  --paddding-navbar: 30px;
+  --padding-navbar: 30px;
+  --colour-header-nav: rgb(195, 140, 82);
+  --colour-first-nav: rgb(205, 125, 63);
 }
 
 
@@ -18,14 +20,135 @@ a:visited {
 }
 
 #main-header {
-  background: linear-gradient(0deg, rgb(121, 121, 121) 0%, 
+  background: linear-gradient(0deg, var(--colour-header-nav) 0%, 
   rgb(17, 203, 194) 98%);}
 
 #main-nav {
-  background-color: rgb(121, 121, 121);
+  background-color: var(--colour-header-nav);
+  padding-top: var(--padding-navbar);
+  padding-bottom: var(--padding-navbar);
 }
 
+#main-nav > ul > li:first-child > a {
+  background-color: var(--colour-first-nav);
+  border-radius: 5px;
+}
 
+#main-nav > ul > li > a {
+  color: white;
+}
+
+#main-nav > ul > li > a:hover {
+  background-color: rgb(237, 172, 103);
+}
+
+.dropdown-content {
+  background-color: var(--colour-header-nav);
+}
+
+.dropdown-content > ul > li > a {
+  color: white;
+}
+
+.dropdown-content > ul > li > a:hover {
+  color: black;
+}
+
+main {
+  background-color: #F3F8FF;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section {
+  height: fit-content;
+  background-color: #dde4ee;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 6vh 4vw;
+}
+
+section:hover {
+  box-shadow: 1px 1px 5px #85909e, -1px -1px 5px #85909e;
+}
+
+section > *:first-child {
+  font-size: 1.9rem;
+  font-weight: bold;
+  font-family: Kalam;
+  text-align: center;
+}
+
+#info {
+  --colour-title: #ea9ccd;
+}
+
+#info > ul {
+  margin-top: 3vh;
+}
+
+#info > ul > li {
+  margin: 3vh 0;
+}
+
+li.title {
+  width: fit-content;
+  color: var(--colour-title);
+  font-size: 1.8rem;
+  font-family: Pacifico;
+  border-bottom: 2px solid var(--colour-title);
+}
+
+li.info {
+  font-size: 1.3rem;
+}
+
+#message > form {
+  margin-top: 2vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+#message > form > div {
+  padding: 1vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#message > form > div > label {
+  margin: 0 1vw 2vh 0;
+}
+
+#message > form > div > input {
+  width: 200px;
+}
+
+#message input:focus, #message textarea:focus {
+  outline: 2px solid rgb(57, 197, 210);
+}
+
+#message > form > p {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+#btn-submit {
+  width: fit-content;
+  margin-top: 2vh;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+  border: 1px solid rgb(75, 75, 75);
+  align-self: center;
+}
+
+#btn-submit:hover {
+  box-shadow: 1px 1px 1px #737e8e;
+  cursor: pointer;
+}
 
 #page-footer {
   background-color: rgb(192, 192, 192);
