@@ -153,3 +153,58 @@ li.info {
 #page-footer {
   background-color: rgb(192, 192, 192);
 }
+
+@media only screen and (max-width: 1000px) {
+  main {
+    flex-direction: column;
+    height: 150vh;
+    padding: 5vh 5vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  
+    #main-nav {
+        display: block;
+    }
+
+    #main-nav > ul {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #main-nav > ul > li {
+        margin: 30px 0;
+    }
+
+    #main-nav > ul > li > a:hover {
+        background-color: transparent;
+    }
+
+    .dropdown {
+        position: inherit;
+        display: inherit;
+    }
+    
+    .dropdown-content {
+        display: block;
+        position: inherit;
+        background-color: transparent;
+        width: fit-content;
+        min-width: 180px;
+        box-shadow: 0 0 black;
+        padding-bottom: 10px;
+    }
+    
+    .dropdown-content > ul {
+        margin-left: 10px;
+    }
+    
+    .dropdown-content > ul > li {
+        margin: 2vh 0;
+        font-family: JetBrainsNF;
+        font-size: 90%;
+    }
+}
