@@ -1,0 +1,150 @@
+/* Variables */
+
+:root {
+  --links-colour: black;
+  --padding-navbar: 30px;
+  --colour-header-nav: rgb(195, 140, 82);
+  --colour-first-nav: rgb(205, 125, 63);
+}
+
+
+/* CSS */
+
+a {
+  color: var(--links-colour);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--links-colour);
+}
+
+#main-header {
+  background: linear-gradient(0deg, var(--colour-header-nav) 0%, 
+  rgb(17, 203, 194) 98%);}
+
+#main-nav {
+  background-color: var(--colour-header-nav);
+  padding-top: var(--padding-navbar);
+  padding-bottom: var(--padding-navbar);
+}
+
+#main-nav > ul > li:first-child > a {
+  background-color: var(--colour-first-nav);
+  border-radius: 5px;
+}
+
+#main-nav > ul > li > a {
+  color: white;
+}
+
+#main-nav > ul > li > a:hover {
+  background-color: rgb(237, 172, 103);
+}
+
+.dropdown-content {
+  background-color: var(--colour-header-nav);
+}
+
+.dropdown-content > ul > li > a {
+  color: white;
+}
+
+.dropdown-content > ul > li > a:hover {
+  color: black;
+}
+
+main {
+  background-color: #F3F8FF;
+  padding: 8vh 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8vh;
+}
+
+main > p {
+  font-size: 1.4em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+main > p:nth-child(2) {
+  font-family: 'Kalam';
+}
+
+main > p > span {
+  text-decoration: underline;
+}
+
+#sentence {
+  text-align: center;
+}
+
+main > img {
+  width: 15vw;
+}
+
+main > img:hover {
+  cursor: grab;
+}
+
+main > img:active {
+  cursor: grabbing;
+}
+
+#page-footer {
+  background-color: rgb(192, 192, 192);
+}
+
+@media only screen and (max-width: 750px) {
+  
+  #main-nav {
+      display: block;
+  }
+
+  #main-nav > ul {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  #main-nav > ul > li {
+      margin: 30px 0;
+  }
+
+  #main-nav > ul > li > a:hover {
+      background-color: transparent;
+  }
+
+  .dropdown {
+      position: inherit;
+      display: inherit;
+  }
+  
+  .dropdown-content {
+      display: block;
+      position: inherit;
+      background-color: transparent;
+      width: fit-content;
+      min-width: 180px;
+      box-shadow: 0 0 black;
+      padding-bottom: 10px;
+  }
+  
+  .dropdown-content > ul {
+      margin-left: 10px;
+  }
+  
+  .dropdown-content > ul > li {
+      margin: 2vh 0;
+      font-family: JetBrainsNF;
+      font-size: 90%;
+  }
+
+  #cookie {
+    width: 50vw;
+  }
+}
