@@ -154,6 +154,10 @@ li.info {
   background-color: rgb(192, 192, 192);
 }
 
+.section-hover {
+  box-shadow: 1px 1px 5px #85909e, -1px -1px 5px #85909e;
+}
+
 @media only screen and (max-width: 1000px) {
   main {
     flex-direction: column;

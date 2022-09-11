@@ -16,6 +16,10 @@
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       const emailField = document.getElementById('email');
+      const usernameField = document.getElementById('username');
+      const messageField = document.getElementById('message-area');
+      const btn = document.getElementById('btn-submit');
+      const message = document.getElementById('message');
       
       emailField.addEventListener('input', VerifyEmail);
 
@@ -30,6 +34,24 @@
         else {
           emailField.style.backgroundColor = 'white';
         }
+      }
+
+      emailField.addEventListener('focus', FocusFields);
+      usernameField.addEventListener('focus', FocusFields);
+      messageField.addEventListener('focus', FocusFields);
+      btn.addEventListener('focus', FocusFields);
+
+      emailField.addEventListener('focusout', UnfocusFields)
+      usernameField.addEventListener('focusout', UnfocusFields);
+      messageField.addEventListener('focusout', UnfocusFields);
+      btn.addEventListener('focusout', UnfocusFields);
+
+      function FocusFields() {
+        message.setAttribute('class', 'section-hover');
+      }
+
+      function UnfocusFields() {
+        message.removeAttribute('class');
       }
     });
   </script>
