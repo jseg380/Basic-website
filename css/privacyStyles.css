@@ -56,54 +56,45 @@ a:visited {
 
 main {
   background-color: #F3F8FF;
-  padding: 8vh 15vw;
+  padding: 0 12vw;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  gap: 8vh;
 }
 
-main > h2 {
+main > div > h2 {
   text-align: center;
+  margin-bottom: 30px;
   font-family: 'kalam';
   font-size: 2.2em;
   font-weight: bold;
 }
 
-main > p {
-  font-size: 1.4em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
+main > div > p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2em;
 }
 
-main > p:nth-child(2) {
-  font-family: 'Kalam';
+main > div > p > a {
+  font-style: italic;
+  font-weight: bold;
 }
 
-main > p > span {
-  text-decoration: underline;
-}
-
-#sentence {
-  text-align: center;
-}
-
-main > img {
-  width: 15vw;
-}
-
-main > img:hover {
-  cursor: grab;
-}
-
-main > img:active {
-  cursor: grabbing;
+main > div > code {
+  width: clamp(280px, 80%, 700px);
+  background-color: #d9dbde;
+  display: inline-block; /* For making margin effective */
+  margin: 3vh 3vw;
+  padding: 2vh 2vw;
+  border-left: 4px solid black;
+  font-family: JetBrainsNF;
 }
 
 #page-footer {
   background-color: rgb(192, 192, 192);
 }
+
+
 
 @media only screen and (max-width: 750px) {
   
@@ -149,9 +140,5 @@ main > img:active {
       margin: 2vh 0;
       font-family: JetBrainsNF;
       font-size: 90%;
-  }
-
-  #cookie {
-    width: 50vw;
   }
 }

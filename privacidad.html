@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/icons/privacy.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main-navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/privacyStyles.css">
+  <title>Privacidad</title>
+</head>
+<body>
+  <header id="main-header">
+    <h1>
+      Juanma's website
+    </h1>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html">Principal</a></li>
+      <li class="dropdown"><a>Materias <span></span></a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="materias/astronomia.html">Astronomía </a></li>
+            <li><a href="materias/filosofia.html">Filosofía </a></li>
+            <li><a href="materias/fisica.html">Física </a></li>
+            <li><a href="materias/psicologia.html">Psicología </a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="turismos.html">Turismos</a></li>
+      <li><a href="libros.html">Libros</a></li>
+      <li><a href="motos.html">Motocicletas</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div>
+    <h2>Privacidad</h2>
+    <p>Esta web no almacena ningún dato personal, de hecho no almacena ningún 
+      dato a excepción del contador de galletas de la página 
+      <a href="cookies.html">Cookies</a>, el cuál es únicamente una variable 
+      que almacena un número, puedes comprobarlo yendo a la consola y 
+      escribiendo este comando:</p>
+    <code title="Haz click para copiar en el portapapeles" id="code">
+      $ console.log(localStorage); <br>
+      $ console.log(sessionStorage);
+    </code>
+    <p>verás que ambos devuelven un array de longitud 0, es decir, que no 
+      tiene elementos, menos en la página de <a href="cookies.html">Cookies</a>
+      ,donde localStorage contendrá una variable llamada 'counter' que almacenará un número.</p>
+    </div>
+  </main>
+
+  <footer id="page-footer">
+    <ul>
+      <li><a href="privacidad.html">Privacidad</a></li> <!-- Not removed on purpose, 
+        to preserve the layout of 3 elements because 2 elements seemed too few -->
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+    </ul>
+    <ul>
+      <li>
+        <a href="https://github.com/jseg380">
+          <img src="img/navbar-footer/github-logo-icon.svg" alt="GitHub profile">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/juan-seg380">
+          <img src="img/navbar-footer/linkedin_black-logo-icon.svg" alt="Linkedin Profile">
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      AdjustHeight();
+
+      window.addEventListener('resize', AdjustHeight);
+
+
+      function AdjustHeight() {
+        const main = document.getElementsByTagName('main')[0];
+        if (window.innerWidth > 750) {
+
+          main.style.height = '0px';
+          main.style.padding = '0 12vw';
+          let newHeight = (window.innerHeight - document.body.offsetHeight);
+
+          if (newHeight < 400)
+            newHeight = 400;
+          main.style.height = `${newHeight.toString()}px`;
+        }
+        else {
+          main.style.height = 'fit-content';
+          main.style.padding = '8vh 8vw';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

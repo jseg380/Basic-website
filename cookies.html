@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/icons/contact.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icons/cookie.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/header.css">
@@ -18,14 +18,17 @@
       const cookie = document.getElementById('cookie');
       const cookieNumber = document.getElementById('cookie-number');
 
-      cookieNumber.innerText = localStorage.getItem('counter');
+      if (localStorage.getItem('counter') === null)
+        cookieNumber.innerText = '0';
+      else
+        cookieNumber.innerText = localStorage.getItem('counter');
 
       cookie.addEventListener('click', () => {
         IncreaseCounter();
 
-        if (localStorage.getItem('counter') === '1000000') {
+        if (localStorage.getItem('counter') === '3141592') {
           const sentence = document.getElementById('sentence');
-          sentence.innerText += '\nWow ya has cogido 1.000.000 de galletas, relájate';
+          sentence.innerText += '\nWow ya has cogido 3141592 de galletas, relájate y disfruta de ese número';
         }
       });
 
@@ -71,6 +74,7 @@
   </nav>
 
   <main>
+    <h2>Cookies</h2>
     <p>Esta web no almacena datos personales algunos.<br>El único dato que almacena es cuantas galletas has cogido, para que no te pases de la raya x).</p>
     <p id="sentence">Has cogido <span id="cookie-number">0</span> galletas</p>
     <img src="img/cookies/cookie.svg" alt="Drawing of a cookie" id="cookie">
