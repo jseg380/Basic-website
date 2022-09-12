@@ -94,6 +94,10 @@ section > *:first-child {
   margin: 3vh 0;
 }
 
+#info > ul > li > a:hover {
+  text-decoration: underline;
+}
+
 li.title {
   width: fit-content;
   color: var(--colour-title);

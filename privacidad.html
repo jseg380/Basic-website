@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/main-navbar.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/privacyStyles.css">
+  <link rel="stylesheet" href="css/privacidadStyles.css">
   <title>Privacidad</title>
 </head>
 <body>
@@ -101,6 +101,15 @@
           main.style.height = 'fit-content';
           main.style.padding = '8vh 8vw';
         }
+      }
+
+      const code = document.getElementById('code');
+
+      code.addEventListener('click', CopyToClipboard);
+
+      function CopyToClipboard() {
+        let text = code.innerText.replaceAll('$ ', '');
+        navigator.clipboard.writeText(text);
       }
     });
   </script>
